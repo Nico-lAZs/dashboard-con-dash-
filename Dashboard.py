@@ -791,11 +791,8 @@ def update_region_vehicle(selected_regions):
     
     return fig
 
-# Al final del archivo, modifica esta parte:
 if __name__ == "__main__":
-    # Para desarrollo local
-    port = int(os.environ.get("PORT", 8050))
-    app.run_server(host="0.0.0.0", port=port, debug=False)
+    app.run_server(host="0.0.0.0", port=8050)
 
 # Agrega esto para Gunicorn (necesario para producción)
 server = app.server
