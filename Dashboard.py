@@ -792,7 +792,8 @@ def update_region_vehicle(selected_regions):
     return fig
 
 if __name__ == "__main__":
-    app.run_server(host="0.0.0.0", port=8050)
+    port = int(os.environ.get("PORT", 8050))
+    app.run(host="0.0.0.0", port=port, debug=False)
 
 # Agrega esto para Gunicorn (necesario para producción)
 server = app.server
