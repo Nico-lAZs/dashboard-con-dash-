@@ -3,7 +3,6 @@ import os
 from dash import Dash, dcc, html, Input, Output, dash_table
 import plotly.express as px
 import numpy as np
-from sklearn.metrics import confusion_matrix
 import plotly.graph_objects as go
 from statsmodels.formula.api import ols
 from statsmodels.stats.anova import AnovaRM
@@ -163,7 +162,7 @@ fig_cm.update_layout(
 )
 
 from sklearn.linear_model import LinearRegression
-from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error, root_mean_squared_error
+from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
 
 df_dir=os.path.join('Datasets','BMW_Car_Sales_Classification.csv')
 df=pd.read_csv(df_dir)
